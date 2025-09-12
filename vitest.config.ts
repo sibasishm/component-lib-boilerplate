@@ -7,6 +7,11 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
+    server: {
+      deps: {
+        inline: ['@am92/react-design-system']
+      }
+    },
     setupFiles: ['./tests/setup.ts'],
     coverage: {
       provider: 'v8',
